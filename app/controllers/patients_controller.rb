@@ -4,6 +4,11 @@ class PatientsController < ApplicationController
     @patients = User.all
   end
 
+  def show
+    @patient = User.find_by(id: params[:id])
+    @prescriptions = @patient.prescriptions
+  end
+
   def new
     @patient = User.new
   end

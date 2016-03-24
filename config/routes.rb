@@ -15,7 +15,8 @@ Rails.application.routes.draw do
     resources :users, only: [:new, :create, :show, :destroy]
     resources :sessions, only: [:new, :create, :destroy]
     resources :prescriptions, except: [:show]
-    resources :patients
+    resources :patients, except: [:destroy]
+    resources :medicines
 
   # Example resource route with options:
   #   resources :products do

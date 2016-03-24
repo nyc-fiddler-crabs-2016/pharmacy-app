@@ -1,0 +1,13 @@
+<h2><%= @patient.name%>'s Records</h2>
+<ul>
+  <li>Insurance: <%=@patient.insurance%></li>
+  <li>Age: <%=@patient.age%></li>
+  <li>Gender: <%=@patient.gender%></li>
+</ul>
+
+<h3>Prescriptions on Record</h3>
+  <ul>
+    <% @prescriptions.each do |prescription| %>
+      <li><%= prescription.medicine_name %>, prescribed <%= prescription.prescribed_date %></li>
+    <% end %>
+  </ul>
