@@ -1,0 +1,6 @@
+<%= form_for @patient, url: patients_path, html: {method: :post}  do |f| %>
+
+  <%= render 'users/form', f: f %>
+  <%= submit_tag "Submit" %>
+
+<% end %>

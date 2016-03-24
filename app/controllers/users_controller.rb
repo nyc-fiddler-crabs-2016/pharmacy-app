@@ -20,6 +20,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @user = User.find_by(id: params[:id])
+    if admin? && @user.id > 2
+      @user.destroy
+      redirect_to patients_path
+    else
+      flash[:notice] = "You do not have the required credentials to perform such an action"
+      redirect_to patients_path
+    end
+  end
+
   private
   def user_params
     params.require(:user).permit(:username, :password, :name, :age, :gender, :insurance)

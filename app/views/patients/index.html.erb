@@ -1,1 +1,10 @@
-"Hi im the patients index"
+<ul>
+  <% @patients.each do |patient| %>
+    <% if patient.id <=2 %>
+    <% else %>
+      <li>Name: <%= patient.name %> Age: <%= patient.age %> Gender: <%= patient.gender %></li>
+      <%= link_to "Edit this record", edit_patient_path(id: patient.id) %><br>
+      <%= link_to "Delete this record", patient, method: :delete, data: {confirm: "Are you sure you want to delete this record?"} %>
+      <% end %>
+  <% end %>
+</ul>

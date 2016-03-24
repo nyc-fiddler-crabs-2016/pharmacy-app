@@ -1,25 +1,7 @@
 <%= form_for @prescription do |f| %>
-  <%= f.label :patient_id %>
-  <%= f.number_field :patient_id %> <br>
-  <%= f.label :medicine_id %>
-  <%= f.number_field :medicine_id %> <br>
+  <%= render 'form', f: f %>
   <%= submit_tag "Create record" %>
 <% end %>
 
-<h3> For reference </h3>
-<div class="user-list">
-  <h4>Patients</h4>
-  <ul>
-    <% @users.each do |user| %>
-      <li><%= "id# #{user.id} name: #{user.name} age: #{user.age} gender: #{user.gender}" %></li>
-    <% end %>
-  </ul>
-</div>
-<div class="medicine-list">
-  <h4>Medicines</h4>
-  <ul>
-    <% @medicines.each do |medicine| %>
-      <li><%= "id# #{medicine.id} name: #{medicine.name}" %></li>
-    <% end %>
-  </ul>
-</div>
+<%= render 'references' %>
+

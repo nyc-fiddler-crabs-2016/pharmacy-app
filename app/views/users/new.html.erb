@@ -1,18 +1,7 @@
 <h1>Sign up!</h1>
 <%= form_for @user do |f| %>
 
-  <%= f.label :username %>
-  <%= f.text_field :username %><br>
-  <%= f.label :password %>
-  <%= f.password_field :password %><br>
-  <%= f.label :name %>
-  <%= f.text_field :name %><br>
-  <%= f.label :age %>
-  <%= f.number_field :age %><br>
-  <%= f.label :gender %>
-  <%= f.text_field :gender %><br>
-  <%= f.label :insurance %>
-  <%= f.text_field :insurance %><br>
+  <%= render 'form', f: f %>
   <%= submit_tag "Submit" %>
 
 <% end %>

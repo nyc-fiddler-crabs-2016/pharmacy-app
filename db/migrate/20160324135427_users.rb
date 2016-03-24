@@ -5,7 +5,7 @@ class Users < ActiveRecord::Migration
       t.string :password_digest, null: false
       t.string :name, null: false
       t.string :insurance
-      t.integer :age, null: false
+      t.integer :age, null: false # CHANGE THIS TO DOB YOU FOOL
       t.string :gender, null: false
 
       t.timestamps null: false
