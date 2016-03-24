@@ -1,4 +1,15 @@
-<h2>"hello <%= @user.name %>"</h2>
-
-<h3>Here is a list of your prescriptions</h3>
+<% if admin? %>
+  <h4>Hello Admin</h4>
+  <ul>
+    <li><%= link_to "Create a new prescription record?", new_prescription_path %></li>
+    <li><%= link_to "View all prescriptions on record?", prescriptions_path %></li>
+  </ul>
+  <% else %>
+    <h3><%= @user.name %>, Here is a list of your prescriptions</h3>
+    <ul>
+      <% @prescriptions.each do |prescription| %>
+        <li><%= prescription.medicine_name %> prescribed <%= prescription.prescribed_date %></li>
+      <% end %>
+    </ul>
+<% end %>
 

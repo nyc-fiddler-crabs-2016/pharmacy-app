@@ -32,6 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'pry-rails'
 gem 'pry-nav'
+gem 'kronic'
 
 
 group :development, :test do
