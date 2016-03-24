@@ -39,7 +39,7 @@ class PrescriptionsController < ApplicationController
       flash[:notice] = "The patient or medicine record is missing at the given ID"
       @users = User.all
       @medicines = Medicine.all
-      render "new"
+      render edit_prescription_path
     end
   end
 

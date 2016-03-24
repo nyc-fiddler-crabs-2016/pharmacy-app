@@ -1,0 +1,6 @@
+<%= form_for @patient, url: patient_path, html: {method: :patch}  do |f| %>
+
+  <%= render 'users/form', f: f %>
+  <%= submit_tag "Submit" %>
+
+<% end %>
