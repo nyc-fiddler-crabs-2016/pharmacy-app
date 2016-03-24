@@ -1,0 +1,13 @@
+<h1>Login!</h1>
+<% if flash.any? %>
+  <%= flash[:notice] %>
+<% end %>
+
+
+<%= form_tag '/sessions' do %>
+
+  Username: <%= text_field_tag :username %>
+  Password: <%= password_field_tag :password %>
+  <%= submit_tag "Submit" %>
+
+<% end %>
