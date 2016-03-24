@@ -3,6 +3,8 @@
   <ul>
     <li><%= link_to "Create a new prescription record?", new_prescription_path %></li>
     <li><%= link_to "View all prescriptions on record?", prescriptions_path %></li>
+    <li><%= link_to "Create a new patient record?", new_patient_path %></li>
+    <li><%= link_to "View all patients on record?", patients_path %></li>
   </ul>
   <% else %>
     <h3><%= @user.name %>, Here is a list of your prescriptions</h3>
